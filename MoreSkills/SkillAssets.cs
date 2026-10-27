@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MoreSkills
 {
-    public static class SkillAssets
+    internal static class SkillAssets
     {
         public static GameObject Firebolt, Lightningbolt, Grenade, BigFireball;
         public static GameObject TracerDefault, TracerSnipe, TracerGolem;

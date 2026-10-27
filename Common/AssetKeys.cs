@@ -1,7 +1,7 @@
 namespace ModCommon
 {
     // Addressables-GUIDs von Vanilla-Assets, Quelle: RoR2BepInExPack GameAssetPathsBetter.
-    public static class AssetKeys
+    internal static class AssetKeys
     {
         public const string MysteryIcon = "2205ae9eb97f98e42ac56ee4a9e32474";
         public const string PickupMystery = "900956bf7229da544b776c57100a8262";

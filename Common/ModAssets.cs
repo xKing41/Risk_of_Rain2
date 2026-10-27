@@ -6,7 +6,7 @@ using UnityEngine.AddressableAssets;
 
 namespace ModCommon
 {
-    public static class ModAssets
+    internal static class ModAssets
     {
         // Lädt ein Spiel-Asset über seinen Addressables-Schlüssel (GUID aus RoR2BepInExPack.GameAssetPathsBetter).
         // Gibt null zurück statt abzustürzen, falls ein Update den Schlüssel entfernt hat.

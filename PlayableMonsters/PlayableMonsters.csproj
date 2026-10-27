@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>PlayableMonsters</AssemblyName>
+    <RootNamespace>PlayableMonsters</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.*" PrivateAssets="all" />
+    <PackageReference Include="R2API.ContentManagement" Version="1.1.0" />
+    <PackageReference Include="R2API.Language" Version="1.1.0" />
+    <PackageReference Include="R2API.Prefab" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../Common/**/*.cs" />
+    <!-- Survivors ohne eigene Skills in einem Slot bekommen Skills aus MoreSkills. -->
+    <ProjectReference Include="../MoreSkills/MoreSkills.csproj" Private="false" />
+  </ItemGroup>
+
+</Project>
