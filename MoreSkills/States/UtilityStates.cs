@@ -16,7 +16,8 @@ namespace MoreSkills.States
         public override void OnEnter()
         {
             base.OnEnter();
-            direction = inputBank && inputBank.moveVector != Vector3.zero ? inputBank.moveVector : characterDirection.forward;
+            Vector3 forward = characterDirection ? characterDirection.forward : transform.forward;
+            direction = inputBank && inputBank.moveVector != Vector3.zero ? inputBank.moveVector : forward;
             direction.y = 0f;
             direction.Normalize();
 
@@ -30,7 +31,8 @@ namespace MoreSkills.States
             if (isAuthority && characterMotor)
             {
                 characterMotor.rootMotion += direction * (moveSpeedStat * 6f * Time.fixedDeltaTime);
-                characterDirection.forward = direction;
+                if (characterDirection)
+                    characterDirection.forward = direction;
             }
             base.FixedUpdate();
         }
