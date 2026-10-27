@@ -35,8 +35,8 @@ namespace MoreItems.Items
             ItemDef.canRemove = true;
             ItemDef.hidden = false;
             // Platzhalter, bis wir eigene Icons und Modelle haben
-            ItemDef.pickupIconSprite = Addressables.LoadAssetAsync<Sprite>("RoR2/Base/Common/MiscIcons/texMysteryIcon.png").WaitForCompletion();
-            ItemDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Mystery/PickupMystery.prefab").WaitForCompletion();
+            ItemDef.pickupIconSprite = Addressables.LoadAssetAsync<Sprite>("2205ae9eb97f98e42ac56ee4a9e32474").WaitForCompletion();
+            ItemDef.pickupModelPrefab = Addressables.LoadAssetAsync<GameObject>("900956bf7229da544b776c57100a8262").WaitForCompletion();
 
             LanguageAPI.Add(ItemDef.nameToken, DisplayName);
             LanguageAPI.Add(ItemDef.pickupToken, Pickup);

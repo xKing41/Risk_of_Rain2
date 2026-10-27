@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build und packen
+        run: |
+          set -e
+          mkdir -p dist
+          for manifest in */thunderstore/manifest.json; do
+            mod=$(dirname $(dirname "$manifest"))
+            echo "::group::$mod"
+            dotnet build "$mod" -c Release -nologo
+            out=dist/$mod
+            mkdir -p "$out"
+            cp "$mod"/thunderstore/* "$out"/
+            cp "$mod"/bin/Release/netstandard2.1/$mod.dll "$out"/
+            (cd "$out" && zip -q -r "../$mod.zip" .)
+            echo "::endgroup::"
+          done
+          ls -la dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mods
+          path: dist/*.zip
