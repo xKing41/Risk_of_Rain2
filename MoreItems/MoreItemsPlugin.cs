@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using BepInEx;
 using MoreItems.Items;
 using R2API;
@@ -13,30 +12,21 @@ namespace MoreItems
     {
         public const string PluginGUID = "xking41.MoreItems";
         public const string PluginName = "MoreItems";
-        public const string PluginVersion = "0.1.0";
+        public const string PluginVersion = "0.2.0";
 
         private void Awake()
         {
-            var items = new List<ItemBase>();
-            items.AddRange(StatItems.All());
-            items.Add(new VampireFang());
-            items.Add(new ThornVest());
-            items.Add(new ProspectorsPick());
-            items.Add(new SoulCollector());
-            items.Add(new EchoBlade());
-            items.Add(new ExecutionersAxe());
+            Fx.Load();
 
-            int registered = 0;
-            foreach (ItemBase item in items)
+            foreach (ModItem item in ItemList.All())
             {
-                if (!Config.Bind("Items", item.Name, true, $"Aktiviert: {item.DisplayName}").Value)
-                    continue;
-
-                item.Register();
-                registered++;
+                if (Config.Bind("Items", item.Name, true, $"Aktiviert: {item.DisplayName}").Value)
+                    ItemSystem.Register(item);
             }
 
-            Logger.LogInfo($"{PluginName} {PluginVersion}: {registered} Items registriert.");
+            ItemSystem.Hook();
+            ItemList.HookDrawbacks();
+            Logger.LogInfo($"{PluginName} {PluginVersion}: {ItemSystem.Registered.Count} Items registriert.");
         }
     }
 }

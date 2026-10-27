@@ -1,12 +1,13 @@
 {
   "name": "MoreItems",
-  "version_number": "0.1.0",
+  "version_number": "0.2.0",
   "website_url": "https://github.com/xKing41/Risk_of_Rain2",
-  "description": "Adds 18 new items. Lots more to come.",
+  "description": "Adds 102 new items across every rarity: common, uncommon, legendary, boss and lunar.",
   "dependencies": [
     "bbepis-BepInExPack-5.4.2117",
     "RiskofThunder-R2API_Items-1.0.8",
     "RiskofThunder-R2API_Language-1.1.0",
-    "RiskofThunder-R2API_RecalculateStats-1.7.0"
+    "RiskofThunder-R2API_RecalculateStats-1.7.0",
+    "RiskofThunder-R2API_ContentManagement-1.1.0"
   ]
 }
