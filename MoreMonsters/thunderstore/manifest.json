@@ -1,0 +1,16 @@
+{
+  "name": "MoreMonsters",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/xKing41/Risk_of_Rain2",
+  "description": "6 new elite types and 12 new enemies and bosses: Beetle King, Ancient Golem, Void Titan and more.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2117",
+    "RiskofThunder-R2API_ContentManagement-1.1.0",
+    "RiskofThunder-R2API_Director-3.1.3",
+    "RiskofThunder-R2API_Elites-1.1.3",
+    "RiskofThunder-R2API_Items-1.0.8",
+    "RiskofThunder-R2API_Language-1.1.0",
+    "RiskofThunder-R2API_Prefab-1.1.1",
+    "RiskofThunder-R2API_RecalculateStats-1.7.0"
+  ]
+}
