@@ -1,0 +1,9 @@
+{
+  "name": "KillBonus",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/xKing41/Risk_of_Rain2",
+  "description": "Gegner-Kills haben eine Chance, Bonus-Gold zu geben.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2117"
+  ]
+}
