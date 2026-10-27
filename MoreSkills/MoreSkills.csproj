@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>MoreSkills</AssemblyName>
+    <RootNamespace>MoreSkills</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.*" PrivateAssets="all" />
+    <PackageReference Include="R2API.ContentManagement" Version="1.1.0" />
+    <PackageReference Include="R2API.Language" Version="1.1.0" />
+    <PackageReference Include="R2API.RecalculateStats" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../Common/**/*.cs" />
+    <EmbeddedResource Include="Icons/*.png" />
+  </ItemGroup>
+
+</Project>

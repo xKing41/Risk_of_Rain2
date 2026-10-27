@@ -1,0 +1,12 @@
+{
+  "name": "MoreSkills",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/xKing41/Risk_of_Rain2",
+  "description": "Gives every survivor, including modded ones, 16 extra skills to choose from.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2117",
+    "RiskofThunder-R2API_ContentManagement-1.1.0",
+    "RiskofThunder-R2API_Language-1.1.0",
+    "RiskofThunder-R2API_RecalculateStats-1.7.0"
+  ]
+}
