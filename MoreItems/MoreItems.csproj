@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>MoreItems</AssemblyName>
+    <RootNamespace>MoreItems</RootNamespace>
+  </PropertyGroup>
+
+  <!-- R2API bringt BepInEx, die Spiel-DLLs (RiskOfRain2.GameLibs) und MMHOOK als Abhängigkeiten mit. -->
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.*" PrivateAssets="all" />
+    <PackageReference Include="R2API.Items" Version="1.0.8" />
+    <PackageReference Include="R2API.Language" Version="1.1.0" />
+    <PackageReference Include="R2API.RecalculateStats" Version="1.7.0" />
+  </ItemGroup>
+
+</Project>
